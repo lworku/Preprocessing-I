@@ -58,12 +58,24 @@ html, body {
 	height: 100%;
 }
 
-@articlebackgroundcolor: lightblue;
+@articlebackgroundcolor: lightgrey;
 
 .main-content {
 	width: 80%;
 	margin: auto;
 
+}
+
+.center-mobile(){
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.center-resume-content(){
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .nav-bar{
@@ -90,17 +102,19 @@ html, body {
 	}
 }
 
+.banner{
+	font-size: 24px;
+}
+
 .resume-content {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	border: 1px solid red;
+	.center-resume-content();
 
 	article{
 		padding: 3%;
-		width: 40%;
-		background-color: lightgrey;
-		margin: 3%;
+		width: 43%;
+		background-color: @articlebackgroundcolor;
+		margin: 2%;
+ 
 
 		h2 {
 			font-size: 24px;
@@ -113,20 +127,41 @@ html, body {
 			font-family: 'Bradley Hand', 'cursive';
 		}
 		}//article
-}
 
-@media (max-width: 500px) {
-	.resume-content{
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
+		@media (max-width: 500px) {
 
-		article {
-			width: 90%;
-			margin: 3%;
+			.banner {
+				img {
+					display: none;
+				}
+			}
+		
+			.resume-content{
+				.center();
+				article {
+					width: 90%;
+					margin: 3%;
+				}
+			}
 		}
-	}
 }
+
+
+
+// @media (max-width: 500px) {
+
+// 	.banner {
+// 		display: none;
+// 	}
+
+// 	.resume-content{
+// 		.center();
+// 		article {
+// 			width: 90%;
+// 			margin: 3%;
+// 		}
+// 	}
+// }
 
 
 
