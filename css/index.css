@@ -162,7 +162,6 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 .resume-content article {
   padding: 3%;
