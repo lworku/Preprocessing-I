@@ -179,12 +179,15 @@ body {
   font-family: 'Bradley Hand', 'cursive';
 }
 @media (max-width: 500px) {
-  .resume-content {
+  .resume-content .banner img {
+    display: none;
+  }
+  .resume-content .resume-content {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  .resume-content article {
+  .resume-content .resume-content article {
     width: 90%;
     margin: 3%;
   }
